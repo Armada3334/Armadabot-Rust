@@ -1,7 +1,7 @@
 [package]
-name = "e14_slash_commands"
+name = "ArmadaBot"
 version = "0.1.0"
-authors = ["my name <my@email.address>"]
+authors = ["Jeremy MacRoberts <contact@jeremymacroberts.com>"]
 edition = "2018"
 
 [dependencies]
@@ -9,5 +9,18 @@ tokio = { version = "1.21.2", features = ["macros", "rt-multi-thread", "time"] }
 
 [dependencies.serenity]
 default-features = false
-features = ["client", "gateway", "rustls_backend", "model"]
+features = [
+    "builder",
+    "chrono",
+    "client",
+    "framework",
+    "gateway",
+    "http",
+    "model",
+    "standard_framework",
+    "utils",
+    "rustls_backend",
+    "cache",
+]
+version = "0.11"
 path = "../../"
