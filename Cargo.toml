@@ -2,10 +2,14 @@
 name = "ArmadaBot"
 version = "0.1.0"
 authors = ["Jeremy MacRoberts <contact@jeremymacroberts.com>"]
-edition = "2018"
+edition = "2021"
 
 [dependencies]
-serenity = { path = "../../", default-features = false, features = [
+tokio = { version = "1.21.2", features = ["macros", "rt-multi-thread", "time"] }
+
+[dependencies.serenity]
+default-features = false
+features = [
     "client",
     "gateway",
     "rustls_backend",
@@ -17,24 +21,15 @@ serenity = { path = "../../", default-features = false, features = [
     "standard_framework",
     "utils",
     "cache"
-    ] }
+    ]
+version = "0.11"
+path = "../../"
 
-tokio = { version = "1.21.2", features = ["macros", "rt-multi-thread", "time"] }
-
-# [dependencies.serenity]
-#default-features = false
-#features = [
-#    "builder",
-#    "chrono",
-#    "client",
-#    "framework",
-#    "gateway",
-#    "http",
-#    "model",
-#    "standard_framework",
-#    "utils",
-#    "rustls_backend",
-#    "cache",
-#]
-#version = "0.11"
-#path = "../../"
+[dependencies.lavalink-rs]
+version = "0.8.0"
+default-features = false
+features = [
+    "serenity",
+    "rustls",
+    "songbird",
+    ]
