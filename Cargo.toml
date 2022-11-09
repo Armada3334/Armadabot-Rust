@@ -1,11 +1,11 @@
 [package]
-name = "ArmadaBot"
+name = "armada_bot"
 version = "0.1.0"
 authors = ["Jeremy MacRoberts <contact@jeremymacroberts.com>"]
 edition = "2021"
 
 [dependencies]
-tokio = { version = "1.21.2", features = ["macros", "rt-multi-thread", "time"] }
+tokio = { version = "1.21.2", features = ["macros", "rt-multi-thread"] }
 
 [dependencies.serenity]
 default-features = false
@@ -23,13 +23,12 @@ features = [
     "cache"
     ]
 version = "0.11"
-path = "../../"
 
-[dependencies.lavalink-rs]
-version = "0.8.0"
-default-features = false
-features = [
-    "serenity",
-    "rustls",
-    "songbird",
-    ]
+#[dependencies.lavalink-rs]
+#version = "0.8.0"
+#default-features = false
+#features = [
+#    "serenity",
+#    "rustls",
+#    "songbird",
+#    ]
